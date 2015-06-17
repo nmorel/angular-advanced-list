@@ -1,0 +1,43 @@
+.super-list-container {
+  border: 1px solid red;
+  display: block;
+  padding: 20px 20px 0 20px;
+  position: relative;
+}
+
+.super-list-item, .super-list-container li.dndPlaceholder {
+  border: 1px solid blue;
+  display: block;
+  padding: 0 30px 20px 30px;
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 80px;
+}
+
+.super-list-item.selected {
+  background: yellow;
+}
+
+.super-list-select {
+  position: absolute;
+  top: 50%;
+  margin-top: -6.5px;
+}
+
+.super-list-draggable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  cursor: pointer;
+  background-color: green;
+}
+
+.super-list-container li.dndPlaceholder {
+
+}
+
+.super-list-item-wrapper {
+
+}

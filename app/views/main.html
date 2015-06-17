@@ -1,0 +1,66 @@
+<div class="container-fluid">
+
+  <div>
+    <h1>
+      Simple list
+    </h1>
+
+    <div my-super-list items="vm.frameworks" item="framework">
+      <div>
+        <h3>
+          <a ng-href="{{ framework.url }}">{{ framework.title }}</a>
+        </h3>
+
+        <div>{{ framework.description }}</div>
+      </div>
+    </div
+  </div>
+
+  <hr>
+
+  <div>
+    <h1>
+      List with selection
+    </h1>
+
+    <div>Selected :
+      <span ng-repeat="selected in vm.selected">
+        {{ selected.title }}
+      </span>
+    </div>
+    <my-super-list items="vm.frameworks" item="framework" select-model="vm.selected" select-on="vm.onSelectionChange">
+      <div>
+        <h3>
+          <a ng-href="{{ framework.url }}">{{ framework.title }}</a>
+        </h3>
+
+        <div>{{ framework.description }}</div>
+      </div>
+    </my-super-list>
+  </div>
+
+  <hr>
+
+  <div>
+    <h1>
+      List with selection and drag and drop
+    </h1>
+
+    <div>Selected :
+      <span ng-repeat="selected in vm.selected">
+        {{ selected.title }}
+      </span>
+    </div>
+    <div my-super-list items="vm.frameworks" item="framework" select-model="vm.selected"
+         select-on="vm.onSelectionChange" dnd="true">
+      <div>
+        <h3>
+          <a ng-href="{{ framework.url }}">{{ framework.title }}</a>
+        </h3>
+
+        <div>{{ framework.description }}</div>
+      </div>
+    </div>
+  </div>
+
+</div>
